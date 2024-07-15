@@ -39,7 +39,7 @@ const NavItem = styled(Link)`
   cursor: pointer;
   font-size: 18px;
   &:hover {
-    color: #ccccff;
+    color:  #e6e6ff;
   }
 `;
 
@@ -68,6 +68,39 @@ const IconLink = styled.a`
   }
 `;
 
+const ProjectsContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+`;
+
+const ProjectItem = styled.div`
+  width: 200px;
+  margin: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+`;
+
+const ProjectName = styled.h4`
+  margin-bottom: 10px;
+`;
+
+const ProjectImage = styled.img`
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+`;
+
+const ProjectDescription = styled.p`
+  margin-top: 10px;
+`;
+
 const AnimatedSection = animated(Section);
 
 function App() {
@@ -88,6 +121,37 @@ function App() {
     { name: 'Agile Methodologies', level: 85 },
   ];
 
+  const projects = [
+    {
+      name: 'Agile Board',
+      image: `${process.env.PUBLIC_URL}/images/AgileBoard.png`,
+      description: 'A project management tool for organizing tasks in an Agile workflow.',
+      link: 'https://deepkse.github.io/AgileBoard'
+    },
+    {
+      name: 'JSON Tree',
+      image: `${process.env.PUBLIC_URL}/images/JSONTree.png`,
+      description: 'An intuitive JSON viewer that presents data in a hierarchical tree structure.',
+      link: 'https://deepkse.github.io/JSONTree'
+    },
+    {
+      name: 'Pomodoro Timer',
+      image: `${process.env.PUBLIC_URL}/images/PomodoroTimer.png`,
+      description: 'A customizable productivity timer with audio notifications for efficient time management.',
+      link: 'https://deepkse.github.io/PomodoroTimer'
+    },
+    {
+      name: 'Password Generator',
+      image: `${process.env.PUBLIC_URL}/images/PasswordGenerator.png`,
+      description: 'A secure password generator for creating robust, randomized passwords.',
+      link: 'https://deepkse.github.io/PasswordGenerator'
+    }
+  ];
+
+  const handleProjectClick = (link) => {
+    window.open(link, '_blank');
+  };
+
   return (
     <AppContainer>
       <Header>
@@ -95,8 +159,8 @@ function App() {
         <Profession>Software Engineer</Profession>
         <Nav>
           <NavItem to="about" smooth={true} onClick={() => setSelectedSection('about')}>About</NavItem>
+          <NavItem to="projects" smooth={true} onClick={() => setSelectedSection('projects')}>Projects</NavItem>
           <NavItem to="experience" smooth={true} onClick={() => setSelectedSection('experience')}>Experience</NavItem>
-          <NavItem to="skills" smooth={true} onClick={() => setSelectedSection('skills')}>Skills</NavItem>
           <NavItem to="contact" smooth={true} onClick={() => setSelectedSection('contact')}>Contact</NavItem>
         </Nav>
       </Header>
@@ -108,12 +172,31 @@ function App() {
         </p>
       </AnimatedSection>
   
+      <AnimatedSection style={fadeProps} id="projects">
+        <h2>Projects</h2>
+        <ProjectsContainer>
+          {projects.map((project, index) => (
+            <ProjectItem key={index} onClick={() => handleProjectClick(project.link)}>
+              <ProjectName>{project.name}</ProjectName>
+              <ProjectImage src={project.image} alt={project.name} />
+              <ProjectDescription>{project.description}</ProjectDescription>
+            </ProjectItem>
+          ))}
+        </ProjectsContainer>
+      </AnimatedSection>
+
       <AnimatedSection style={fadeProps} id="experience">
         <h2>Work Experience</h2>
-        <p>Syngenta - Software Engineering Co-Op, 2023-2023</p>
-        <p>Capgemini - Software Engineer, 2019-2020</p>
-        <p>Capgemini - Analyst Intern, 2018-2019</p>
-        <h3>Education</h3>
+        <ul>
+          <li><p><strong>Raven</strong> - Software Developer, 2024-Present</p></li>
+          <li><p><strong>Syngenta</strong> - Software Engineering Co-Op, 2023-2023</p></li>
+          <li><p><strong>Capgemini</strong> - Software Engineer, 2019-2020</p></li>
+          <li><p><strong>Capgemini</strong> - Analyst Intern, 2018-2019</p></li>
+        </ul>         
+      </AnimatedSection>
+
+      <AnimatedSection style={fadeProps} id="education">
+        <h2>Education</h2>
         <p>Master's in Computer Science, University of Texas at Dallas</p>
         <p>Bachelors's in Computer Science and Engineering</p>
       </AnimatedSection>
