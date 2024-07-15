@@ -147,6 +147,12 @@ function App() {
       link: 'https://deepkse.github.io/TextCompare'
     },
     {
+      name: 'Regex Tester',
+      image: `${process.env.PUBLIC_URL}/images/RegexTester.png`,
+      description: 'A real-time regex tester that highlights matches in user-provided text.',
+      link: 'https://deepkse.github.io/RegexTester'
+    },
+    {
       name: 'Password Generator',
       image: `${process.env.PUBLIC_URL}/images/PasswordGenerator.png`,
       description: 'A secure password generator for creating robust, randomized passwords.',
