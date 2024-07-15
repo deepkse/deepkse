@@ -141,6 +141,12 @@ function App() {
       link: 'https://deepkse.github.io/PomodoroTimer'
     },
     {
+      name: 'Text Compare',
+      image: `${process.env.PUBLIC_URL}/images/TextCompare.png`,
+      description: 'Highlights differences in inputs, enabling efficient code review and troubleshooting.',
+      link: 'https://deepkse.github.io/TextCompare'
+    },
+    {
       name: 'Password Generator',
       image: `${process.env.PUBLIC_URL}/images/PasswordGenerator.png`,
       description: 'A secure password generator for creating robust, randomized passwords.',
