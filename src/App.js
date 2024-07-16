@@ -135,6 +135,12 @@ function App() {
       link: 'https://deepkse.github.io/JSONTree'
     },
     {
+      name: 'Query Optimizer',
+      image: `${process.env.PUBLIC_URL}/images/QueryOptimizer.png`,
+      description: 'AI-powered tool for suggesting and explaining SQL query optimizations across various database systems.',
+      link: 'https://github.com/deepkse/QueryOptimizer'
+    },
+    {
       name: 'Pomodoro Timer',
       image: `${process.env.PUBLIC_URL}/images/PomodoroTimer.png`,
       description: 'A customizable productivity timer with audio notifications for efficient time management.',
