@@ -141,22 +141,28 @@ function App() {
       link: 'https://github.com/deepkse/QueryOptimizer'
     },
     {
-      name: 'Pomodoro Timer',
-      image: `${process.env.PUBLIC_URL}/images/PomodoroTimer.png`,
-      description: 'A customizable productivity timer with audio notifications for efficient time management.',
-      link: 'https://deepkse.github.io/PomodoroTimer'
-    },
-    {
       name: 'Text Compare',
       image: `${process.env.PUBLIC_URL}/images/TextCompare.png`,
       description: 'Highlights differences in inputs, enabling efficient code review and troubleshooting.',
       link: 'https://deepkse.github.io/TextCompare'
     },
     {
+      name: 'README Editor',
+      image: `${process.env.PUBLIC_URL}/images/README-Editor.png`,
+      description: 'Real-time Markdown editing and preview for crafting polished GitHub README files.',
+      link: 'https://deepkse.github.io/README-Editor'
+    },
+    {
       name: 'Regex Tester',
       image: `${process.env.PUBLIC_URL}/images/RegexTester.png`,
       description: 'A real-time regex tester that highlights matches in user-provided text.',
       link: 'https://deepkse.github.io/RegexTester'
+    },
+    {
+      name: 'Pomodoro Timer',
+      image: `${process.env.PUBLIC_URL}/images/PomodoroTimer.png`,
+      description: 'A customizable productivity timer with audio notifications for efficient time management.',
+      link: 'https://deepkse.github.io/PomodoroTimer'
     },
     {
       name: 'Password Generator',
