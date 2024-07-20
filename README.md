@@ -8,4 +8,4 @@ Feel free to explore my GitHub repository, and don't hesitate to reach out if yo
 
 ## Portfolio
 
-[deepkse.github.io/deepkse](https://deepkse.github.io/deepkse)
+[deepkse.github.io](https://deepkse.github.io/deepkse)
