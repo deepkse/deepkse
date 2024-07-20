@@ -123,10 +123,16 @@ function App() {
 
   const projects = [
     {
-      name: 'Agile Board',
-      image: `${process.env.PUBLIC_URL}/images/AgileBoard.png`,
-      description: 'A project management tool for organizing tasks in an Agile workflow.',
-      link: 'https://deepkse.github.io/AgileBoard'
+      name: 'CrowdStrike Impacted',
+      image: `${process.env.PUBLIC_URL}/images/CrowdStrikeImpactChecker.png`,
+      description: 'Helps users determine if their system is impacted by the CrowdStrike update issue from July 19, 2024.',
+      link: 'https://github.com/deepkse/CrowdStrike-Impact-Checker/releases'
+    },
+    {
+      name: 'Query Optimizer',
+      image: `${process.env.PUBLIC_URL}/images/QueryOptimizer.png`,
+      description: 'AI-powered tool for suggesting and explaining SQL query optimizations across various database systems.',
+      link: 'https://github.com/deepkse/QueryOptimizer'
     },
     {
       name: 'JSON Tree',
@@ -135,10 +141,10 @@ function App() {
       link: 'https://deepkse.github.io/JSONTree'
     },
     {
-      name: 'Query Optimizer',
-      image: `${process.env.PUBLIC_URL}/images/QueryOptimizer.png`,
-      description: 'AI-powered tool for suggesting and explaining SQL query optimizations across various database systems.',
-      link: 'https://github.com/deepkse/QueryOptimizer'
+      name: 'Agile Board',
+      image: `${process.env.PUBLIC_URL}/images/AgileBoard.png`,
+      description: 'A project management tool for organizing tasks in an Agile workflow.',
+      link: 'https://deepkse.github.io/AgileBoard'
     },
     {
       name: 'Text Compare',
